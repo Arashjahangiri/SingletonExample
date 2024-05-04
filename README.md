@@ -13,16 +13,16 @@ A)  Sealed Class
 
 a sealed class in C# is a class that cannot be extended or inherited. 
 
-public sealed class Singleton
-{
-}
+    public sealed class Singleton
+    {
+    }
 
 B) Private Constractor
 
 A private constructor is a special instance constructor in C# that restricts the creation of objects from outside the class it is defined in. It is usually used in classes that only contain static members. If a class has one or more private constructors and no public constructors, other classes (except nested classes cannot create instances of this class. 
 
 
-private Singleton() {}
+    private Singleton() {}
 
 
 c)lock statement
@@ -30,13 +30,13 @@ c)lock statement
 The lock statement acquires the mutual-exclusion lock for a given object, executes a statement block, and then releases the lock. While a lock is held, the thread that holds the lock can again acquire and release the lock. Any other thread is blocked from acquiring the lock and waits until the lock is released. The lock statement ensures that at maximum only one thread executes its body at any time moment.
 
 
-public static object _lock=new object();
+    public static object _lock=new object();
 
 
-lock (_lock)
-{
+    lock (_lock)
+    {
     // Your code...
-}
+    }
 
 
 Singleton Class Example:
@@ -44,8 +44,8 @@ Singleton Class Example:
 
 /************************************************/
 
- public sealed class Singleton
- {
+     public sealed class Singleton
+     {
 
      public static Singleton _instance;
      public static object _lock = new object();
@@ -78,7 +78,7 @@ Singleton Class Example:
 
 
 
- }//////////////End of class
+     }//////////////End of class
 
 /************************************************/
 
